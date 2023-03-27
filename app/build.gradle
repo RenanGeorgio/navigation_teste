@@ -1,12 +1,11 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 31
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.example.administrator.osmapitest"
-        minSdkVersion 24
+        minSdkVersion 19
         targetSdkVersion 31
         versionCode 1
         versionName "1.0"
@@ -56,6 +55,17 @@ dependencies {
     implementation files('libs/UHFReader.jar')
 
     implementation project(path: ':opencv')
+    
+    implementation 'com.github.MKergall:osmbonuspack:6.5.1'
+    implementation 'org.osmdroid:osmdroid-mapsforge:6.0.1'
+    implementation 'org.mapsforge:mapsforge-map-android:0.9.1'
+    implementation 'org.mapsforge:mapsforge-map:0.9.1'
+    implementation 'org.mapsforge:mapsforge-themes:0.9.1'
+    implementation 'org.osmdroid:osmdroid-android:6.0.1'
+    implementation 'org.slf4j:slf4j-api:1.7.21'
+
+
+    implementation files('libs/dom4j-2.0.2.jar')
 
     testImplementation 'junit:junit:4.13.2'
 
