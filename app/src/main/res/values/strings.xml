@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Tagfy Navigation</string>
+    <string name="app_name">Sistema de posicionamento </string>
     <string name="title_activity_laucher_activiy">LaucherActiviy</string>
     <string name="ar_api_key">AIzaSyDIs9Y4yI2BEmNPg15RFM60i2VdzpoSEqE</string>
     <string name="cancel">Cancel</string>
@@ -8,7 +8,6 @@
     <string name="host_ok">Host</string>
     <string name="initial_room_code">0000</string>
     <string name="resolve_button_text">Resolve</string>
-    <string name="app_name">Sistema de posicionamento </string>
 
     <!-- Strings in the Resolve Dialog Box -->
     <string name="resolve_dialog_ok">Resolve</string>
