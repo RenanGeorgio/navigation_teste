@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="0dp"
+	android:keepScreenOn="true"
+	app:layout_constraintHeight_percent="0.3"
+	app:layout_constraintTop_toTopOf="parent"
+	app:layout_constraintBottom_toBottomOf="parent">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:orientation="horizontal">
+
+			<Spinner
+				android:id="@+id/sp_ConnectType"
+				android:layout_width="100dp"
+				android:layout_height="wrap_content"/>
+
+			<EditText
+				android:id="@+id/Text_IP"
+				android:layout_width="135dp"
+				android:layout_height="wrap_content"/>
+
+			<EditText
+				android:id="@+id/Text_Port"
+				android:layout_width="55dp"
+				android:layout_height="wrap_content"/>
+
+			<Button
+				android:id="@+id/ConnectBtn"
+				android:layout_width="70dp"
+				android:layout_height="wrap_content"
+				android:text="Ligar"
+				android:textSize="15sp"/>
+
+			<EditText
+				android:id="@+id/Text_SerialPort"
+				android:layout_width="135dp"
+				android:layout_height="wrap_content"
+				android:text="/dev/ttyS3"
+				android:visibility="gone"/>
+
+			<Button
+				android:id="@+id/ConnectComBtn"
+				android:layout_width="120dp"
+				android:layout_height="wrap_content"
+				android:text="porta serial aberta"
+				android:visibility="gone"
+				android:textSize="15sp"/>
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+			<TextView
+				android:id="@+id/TXT1"
+				android:layout_width="155dp"
+				android:layout_height="wrap_content"
+				android:text="Selecione o cliente operacional:"
+				android:textSize="20sp"/>
+
+			<Spinner
+				android:id="@+id/sp_clients"
+				android:layout_width="220dp"
+				android:layout_height="wrap_content"/>
+		</LinearLayout>
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:layout_weight="0.78"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
+
+		<TextView
+			android:id="@+id/countTXT"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Número de etiquetas: 0"
+			android:textSize="20sp"/>
+
+		<ListView
+			android:id="@+id/lvReception"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+		</ListView>
+	</LinearLayout>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:keepScreenOn="true"
+		android:orientation="horizontal"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
+		<CheckBox
+			android:id="@+id/checkBox1"
+			android:layout_width="74dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="2"
+			android:checked="false"
+			android:padding="10dp"
+			android:layout_marginTop="10dp"
+			android:layout_marginBottom="10dp"
+			android:layout_marginStart="16dp"
+			android:layout_marginEnd="16dp"
+	    	android:text="temperatura" />
+	<Button
+	    android:id="@+id/SavesBtn"
+		android:layout_width="80dp"
+		android:layout_height="wrap_content"
+		android:textSize="12dp"
+		android:layout_weight="3"
+		android:text="save" />
+		<Button
+			android:id="@+id/CleanBtn"
+			android:layout_width="55dp"
+			android:layout_height="wrap_content"
+			android:textSize="11dp"
+			android:layout_weight="3"
+			android:text="Limpar" />
+		<Button
+			android:id="@+id/SoundBtn"
+			android:layout_width="75dp"
+			android:layout_height="wrap_content"
+			android:textSize="12dp"
+			android:layout_weight="2"
+			android:text="definições de som" />
+		<Button
+			android:id="@+id/SetBtn"
+			android:layout_width="80dp"
+			android:layout_height="wrap_content"
+			android:textSize="12dp"
+			android:layout_weight="4"
+			android:text="configurações de parâmetros" />
+	</LinearLayout>
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:keepScreenOn="true"
+		android:orientation="horizontal"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
+		<CheckBox
+			android:id="@+id/checkBox2"
+			android:layout_width="74dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="2"
+			android:text="ASCII" />
+		<Button android:textSize="12dp" android:layout_width="300dp" android:text="iniciar loop"
+			android:layout_height="wrap_content" android:id="@+id/CycleBtn"  android:layout_weight="12"
+			android:onClick="MuiltTags">
+		</Button>
+	</LinearLayout>
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="This is activity_tag.xml"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

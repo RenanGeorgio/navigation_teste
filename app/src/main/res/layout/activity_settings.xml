@@ -1,0 +1,3685 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical" />
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <!-- ********************************tab1 Start********************************************* -->
+
+            <LinearLayout
+                android:id="@+id/tab1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:keepScreenOn="true"
+                android:orientation="vertical" >
+
+                <ScrollView
+                    android:id="@+id/scrollview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <!-- Start -->
+
+
+                        <!-- 工作模式选择下拉框 -->
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/Backcolor1"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/select_workmode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="工作模式"
+                                android:textColor="@drawable/Navy"
+                                android:textSize="@dimen/textview_size" >
+                            </TextView>
+
+                            <Spinner
+                                android:id="@+id/sp_set_workmode"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/textview_size" >
+                            </Spinner>
+                        </LinearLayout>
+
+                        <!-- 自动模式参数 -->
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/Backcolor2"
+                            android:orientation="vertical" >
+
+                          <!--   <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="自动模式参数"
+                                android:textColor="@drawable/RoyalBlue"
+                                android:textSize="16dp"
+                                android:textStyle="bold" >
+                            </TextView>      -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/Backcolor2"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/findtags_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="自动寻标时间"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/wm_autotime"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLength="5"
+                                    android:minWidth="80dp"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="*200ms"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- 触发模式参数 -->
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/Backcolor1"
+                            android:orientation="vertical" >
+
+                         <!-- 
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="触发模式参数"
+                                android:textColor="@drawable/MediumSlateBlue"
+                                android:textSize="16dp"
+                                android:textStyle="bold" >
+                            </TextView>    -->
+
+                            <!-- 电平 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/Backcolor1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/level"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="电        平"
+                                    android:textColor="@drawable/MediumSlateBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <Spinner
+                                    android:id="@+id/sp_set_level"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/textview_size" >
+                                </Spinner>
+                            </LinearLayout>
+
+                            <!-- 超时时间 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/Backcolor1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_TimeOut"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="超        时"
+                                    android:textColor="@drawable/MediumSlateBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/wm_outtime"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLength="5"
+                                    android:minWidth="80dp"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/MediumSlateBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="*100ms(0~255)"
+                                    android:textColor="@drawable/MediumSlateBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+                            </LinearLayout>
+
+                            <!-- 触发后工作状态 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/Backcolor1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_TriggerState"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="触发后工作状态"
+                                    android:textColor="@drawable/MediumSlateBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <RadioGroup
+                                    android:id="@+id/radiogroup_workstate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:orientation="horizontal" >
+
+                                    <RadioButton
+                                        android:id="@+id/radiobutton_single"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="单次"
+                                        android:textColor="@drawable/MediumSlateBlue" />
+
+                                    <RadioButton
+                                        android:id="@+id/radiobutton_multi"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="循环"
+                                        android:textColor="@drawable/MediumSlateBlue" />
+                                </RadioGroup>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- 通道门模式参数 -->
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/Backcolor2"
+                            android:orientation="vertical" >
+
+                           <!-- 
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="通道门模式参数"
+                                android:textColor="@drawable/DodgerBlue"
+                                android:textSize="16dp"
+                                android:textStyle="bold" >
+                            </TextView>     
+                            -->
+
+                            <!-- 校验位12 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_crc1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="校验位1"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/wm_crc1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLength="5"
+                                    android:minWidth="50dp"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="(0~11)"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/tB_crc2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:text="校验位2"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/wm_crc2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLength="5"
+                                    android:minWidth="50dp"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="(0~11)"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+                            </LinearLayout>
+
+                            <!-- 第一二位 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_Byte1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="第一位"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/wm_num1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLength="5"
+                                    android:minWidth="50dp"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <TextView
+                                    android:id="@+id/tB_Byte2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="43dp"
+                                    android:text="第二位"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/wm_num2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLength="5"
+                                    android:minWidth="50dp"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+                            </LinearLayout>
+
+                            <!-- 报警方式 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_AlarmMode"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="报警方式"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <Spinner
+                                    android:id="@+id/sp_set_policetype"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/textview_size" >
+                                </Spinner>
+                            </LinearLayout>
+
+                            <!-- 报警总数、报警时间 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_AlarmCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="报警总数"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/wm_policenum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLength="5"
+                                    android:minWidth="60dp"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <TextView
+                                    android:id="@+id/tB_AlarmTime"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:text="报警时间"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/wm_policetime"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLength="5"
+                                    android:minWidth="60dp"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="*200ms"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+                            </LinearLayout>
+
+                            <!-- 停止时间 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_StopTime"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="停止时间"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/wm_stoptime"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLength="5"
+                                    android:minWidth="80dp"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="*200ms"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- 读蜂鸣器 -->
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/Backcolor1"
+                            android:orientation="vertical" >
+
+                            <!-- 
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="读蜂鸣器"
+                                android:textColor="@drawable/Navy"
+                                android:textSize="16dp"
+                                android:textStyle="bold" >
+                            </TextView>
+                             -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+                                
+                            <TextView
+                                android:id="@+id/tB_ReadBuzzer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="读蜂鸣器"
+                                android:textColor="@drawable/Navy"
+                                android:textSize="16dp"
+                                android:textStyle="bold" >
+                            </TextView>
+
+                                <RadioGroup
+                                    android:id="@+id/radiogroup_readbuzzer"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal" >
+
+                                    <RadioButton
+                                        android:id="@+id/radiobutton_readon"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="开启"
+                                        android:textColor="@drawable/Navy" />
+
+                                    <RadioButton
+                                        android:id="@+id/radiobutton_readoff"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="关闭"
+                                        android:textColor="@drawable/Navy" />
+                                </RadioGroup>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- 写蜂鸣器 -->
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/Backcolor2"
+                            android:orientation="vertical" >
+
+                          <!--  
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="写蜂鸣器"
+                                android:textColor="@drawable/Navy"
+                                android:textSize="16dp"
+                                android:textStyle="bold" >
+                            </TextView>
+                            -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+                                
+                           <TextView
+                                android:id="@+id/tB_WriteBuzzer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="写蜂鸣器"
+                                android:textColor="@drawable/Navy"
+                                android:textSize="16dp"
+                                android:textStyle="bold" >
+                            </TextView>
+
+                                <RadioGroup
+                                    android:id="@+id/radiogroup_writebuzzer"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal" >
+
+                                    <RadioButton
+                                        android:id="@+id/radiobutton_writeon"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="开启"
+                                        android:textColor="@drawable/Navy" />
+
+                                    <RadioButton
+                                        android:id="@+id/radiobutton_writeoff"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="关闭"
+                                        android:textColor="@drawable/Navy" />
+                                </RadioGroup>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- 心跳参数 -->
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/Backcolor1"
+                            android:orientation="vertical" >
+
+                            <!--  
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="心跳参数"
+                                android:textColor="@drawable/Navy"
+                                android:textSize="16dp"
+                                android:textStyle="bold" >
+                            </TextView>
+                            -->
+
+                            <!-- 心跳参数状态:开启/关闭 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+                                
+                           <TextView
+                                android:id="@+id/tB_HeartBeat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="心跳参数"
+                                android:textColor="@drawable/Navy"
+                                android:textSize="16dp"
+                                android:textStyle="bold" >
+                            </TextView>
+
+                                <RadioGroup
+                                    android:id="@+id/radiogroup_heartstate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal" >
+
+                                    <RadioButton
+                                        android:id="@+id/radiobutton_hearton"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="开启"
+                                        android:textColor="@drawable/Navy" />
+
+                                    <RadioButton
+                                        android:id="@+id/radiobutton_heartoff"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="关闭"
+                                        android:textColor="@drawable/Navy" />
+                                </RadioGroup>
+                            </LinearLayout>
+
+                            <!-- 心跳间隔时间 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_HBInterval"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="心跳间隔"
+                                    android:textColor="@drawable/Navy"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/wm_heartintervel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLength="5"
+                                    android:minWidth="80dp"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/Navy"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="*200ms"
+                                    android:textColor="@drawable/Navy"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- 过滤 -->
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/Backcolor2"
+                            android:orientation="vertical" >
+
+                           <!--  
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="过滤"
+                                android:textColor="@drawable/Navy"
+                                android:textSize="16dp"
+                                android:textStyle="bold" >
+                            </TextView>
+                            -->
+
+                            <!-- 过滤类型 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_FilterType"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="过滤类型"
+                                    android:textColor="@drawable/Navy"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <Spinner
+                                    android:id="@+id/sp_set_filtertype"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/textview_size" >
+                                </Spinner>
+                            </LinearLayout>
+
+                            <!-- 过滤时间 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_FilterTime"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="过滤时间"
+                                    android:textColor="@drawable/Navy"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/wm_filtertime"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLength="5"
+                                    android:minWidth="80dp"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/Navy"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="*100ms"
+                                    android:textColor="@drawable/Navy"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- 主板版本 -->
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/Backcolor1"
+                            android:orientation="vertical" >
+
+                            <!--  
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="主板"
+                                android:textColor="@drawable/Navy"
+                                android:textSize="16dp"
+                                android:textStyle="bold" >
+                            </TextView>
+                            -->
+
+                            <!-- 主板固件版本 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_MainBoardFirmVersion"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="主板固件版本"
+                                    android:textColor="@drawable/Navy"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/S_Firm_Version"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="30dp"
+                                    android:text="0.0.0"
+                                    android:textColor="@drawable/Navy"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+                            </LinearLayout>
+
+                            <!-- 主板硬件版本 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_MainBoardHardVersion"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="主板硬件版本"
+                                    android:textColor="@drawable/Navy"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/S_Hard_Version"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="30dp"
+                                    android:text="0.0.0"
+                                    android:textColor="@drawable/Navy"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- 模块版本 -->
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/Backcolor2"
+                            android:orientation="vertical" >
+
+                            <!--  
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="模块"
+                                android:textColor="@drawable/DarkGreen"
+                                android:textSize="16dp"
+                                android:textStyle="bold" >
+                            </TextView>
+                            -->
+
+                            <!-- 模块固件版本 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_ModuleFirmVersion"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="模块固件版本"
+                                    android:textColor="@drawable/DarkGreen"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/M_Firm_Version"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="30dp"
+                                    android:text="0.0.0"
+                                    android:textColor="@drawable/DarkGreen"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+                            </LinearLayout>
+
+                            <!-- 模块硬件版本 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_ModuleHardVersion"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="模块硬件版本"
+                                    android:textColor="@drawable/DarkGreen"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/M_Hard_Version"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="30dp"
+                                    android:text="0.0.0"
+                                    android:textColor="@drawable/DarkGreen"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- 韦根 -->
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/Backcolor1"
+                            android:orientation="vertical" >
+
+                            <!-- 
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="韦根"
+                                android:textColor="@drawable/Navy"
+                                android:textSize="16dp"
+                                android:textStyle="bold" >
+                            </TextView>
+                             -->
+
+                            <!-- 韦根开启或关闭 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <RadioGroup
+                                    android:id="@+id/radiogroup_wegenstate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal" >
+
+                                    <RadioButton
+                                        android:id="@+id/radiobutton_wegenon"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="韦根开启"
+                                        android:textColor="@drawable/Navy" />
+
+                                    <RadioButton
+                                        android:id="@+id/radiobutton_wegenoff"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="韦根关闭"
+                                        android:textColor="@drawable/Navy" />
+                                </RadioGroup>
+                            </LinearLayout>
+
+                            <!-- 韦根位数:26位/34位 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <RadioGroup
+                                    android:id="@+id/radiogroup_wegennum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal" >
+
+                                    <RadioButton
+                                        android:id="@+id/radiobutton_wegen26"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="韦根_26位"
+                                        android:textColor="@drawable/Navy" />
+
+                                    <RadioButton
+                                        android:id="@+id/radiobutton_wegen34"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="韦根_34位"
+                                        android:textColor="@drawable/Navy" />
+                                </RadioGroup>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- GPIO上电状态 -->
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/Backcolor2"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/tB_GPIOState"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="GPIO上电状态"
+                                android:textColor="@drawable/Navy"
+                                android:textSize="16dp"
+                                android:textStyle="bold" >
+                            </TextView>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_gpio1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="IO1-H" />
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_gpio2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="IO2-H" />
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_gpio3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="IO3-H" />
+                                
+                                  <CheckBox
+                                    android:id="@+id/checkbox_gpio4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="IO4-H" />
+                            </LinearLayout>
+                                                                                   
+                        </LinearLayout>
+
+                        <!-- 上报GPIO输入使能 -->
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/Backcolor1"
+                            android:orientation="vertical" >
+
+                            <!--  
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="上报GPIO输入使能"
+                                android:textColor="@drawable/Navy"
+                                android:textSize="16dp"
+                                android:textStyle="bold" >
+                            </TextView>
+                            -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+                                  
+                           <TextView
+                                android:id="@+id/tB_GPIOInputMake"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="上报GPIO输入使能"
+                                android:textColor="@drawable/Navy"
+                                android:textSize="16dp"
+                                android:textStyle="bold" >
+                            </TextView>
+
+                                <RadioGroup
+                                    android:id="@+id/radiogroup_gpioin"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal" >
+
+                                    <RadioButton
+                                        android:id="@+id/radiobutton_gpioinon"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="开启"
+                                        android:textColor="@drawable/Navy" />
+
+                                    <RadioButton
+                                        android:id="@+id/radiobutton_gpioinoff"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="关闭"
+                                        android:textColor="@drawable/Navy" />
+                                </RadioGroup>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- GPIO0同步 -->
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/Backcolor2"
+                            android:orientation="vertical" >
+
+                            <!--  
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="GPIO0同步"
+                                android:textColor="@drawable/Navy"
+                                android:textSize="16dp"
+                                android:textStyle="bold" >
+                            </TextView>
+                            -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+                                
+                            <TextView
+                                android:id="@+id/tB_GPIOSynchronous"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="GPIO0同步"
+                                android:textColor="@drawable/Navy"
+                                android:textSize="16dp"
+                                android:textStyle="bold" >
+                            </TextView>
+
+                                <RadioGroup
+                                    android:id="@+id/radiogroup_gpio0state"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal" >
+
+                                    <RadioButton
+                                        android:id="@+id/radiobutton_gpio0on"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="开启"
+                                        android:textColor="@drawable/Navy" />
+
+                                    <RadioButton
+                                        android:id="@+id/radiobutton_gpio0off"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="关闭"
+                                        android:textColor="@drawable/Navy" />
+                                </RadioGroup>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- 其他参数 -->
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/Backcolor1"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/tB_WorkModeConfig"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="其他参数"
+                                android:textColor="@drawable/Navy"
+                                android:textSize="16dp"
+                                android:textStyle="bold" >
+                            </TextView>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_statesound"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="状态音开" />
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_throughdata1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="协议透传" />
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_throughdata2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="直接透传" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- 获取/设置 -->
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/Backcolor2"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <Button
+                                    android:id="@+id/btn_workmode_get"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="获取"
+                                    android:textColor="@drawable/Navy"
+                                    android:textSize="@dimen/edittext_size"
+                                    android:textStyle="bold" />
+
+                                <Button
+                                    android:id="@+id/btn_workmode_set"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="设置"
+                                    android:textColor="@drawable/Navy"
+                                    android:textSize="@dimen/edittext_size"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- End -->
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+
+            <!-- ********************************tab1 End********************************************* -->
+
+
+            <!-- ********************************tab2 Start********************************************* -->
+
+            <LinearLayout
+                android:id="@+id/tab2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:keepScreenOn="true"
+                android:orientation="vertical" >
+
+                <ScrollView
+                    android:id="@+id/scrollview2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <!-- Tab2 滚动条Start -->
+
+
+                        <!-- 区域设置、链路设置 -->
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/Backcolor1"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_RFArea"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="区域设置"
+                                    android:textSize="20dp" />
+
+                                <TextView
+                                    android:id="@+id/textViewlink"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.10"
+                                    android:text="链路设置"
+                                    android:textSize="20dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_Save"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="存储"
+                                    android:textSize="20dp" >
+                                </TextView>
+
+                                <Spinner
+                                    android:id="@+id/sp_region_save"
+                                    android:layout_width="122dp"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="20dp" >
+                                </Spinner>
+
+                                <Spinner
+                                    android:id="@+id/sp_rflinklist"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_Area"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="区域"
+                                    android:textSize="20dp" >
+                                </TextView>
+
+                                <Spinner
+                                    android:id="@+id/sp_region_region"
+                                    android:layout_width="122dp"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="20dp" >
+
+                                    <!-- android:layout_weight="0.26" -->
+                                </Spinner>
+
+                                <Button
+                                    android:id="@+id/bt_rflink_get"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="获取链路" />
+
+                                <Button
+                                    android:id="@+id/bt_rflink_set"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="设置链路" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <Button
+                                    android:id="@+id/bt_region_get"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="获取"
+                                    android:textSize="20dp" >
+                                </Button>
+
+                                <Button
+                                    android:id="@+id/bt_region_set"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="设置"
+                                    android:textSize="20dp" >
+                                </Button>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- 工作时间、间隔时间 -->
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/Backcolor2"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/tB_WorkAndInterval"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="单通道间隔时间"
+                                android:textSize="20dp" >
+                            </TextView>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/worktimer"
+                                    android:layout_width="70dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="工作时间"
+                                    android:textSize="17dp" >
+                                </TextView>
+
+                                <SeekBar
+                                    android:id="@+id/sb_worktime"
+                                    android:layout_width="110dp"
+                                    android:layout_height="wrap_content"
+                                    android:max="40000"
+                                    android:progress="0" />
+
+                                <TextView
+                                    android:id="@+id/countTXT"
+                                    android:layout_width="70dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="间隔时间"
+                                    android:textSize="17dp" >
+                                </TextView>
+
+                                <SeekBar
+                                    android:id="@+id/sb_inter"
+                                    android:layout_width="110dp"
+                                    android:layout_height="wrap_content"
+                                    android:max="40000"
+                                    android:progress="0" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <EditText
+                                    android:id="@+id/et_worktime"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLength="5"
+                                    android:minWidth="80dp"
+                                    android:numeric="integer"
+                                    android:textSize="20dp" >
+                                </EditText>
+
+                                <TextView
+                                    android:id="@+id/tv_worktime"
+                                    android:layout_width="110dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="0ms"
+                                    android:textSize="20dp" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/et_inter"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLength="5"
+                                    android:minWidth="80dp"
+                                    android:numeric="integer"
+                                    android:textSize="20dp" >
+                                </EditText>
+
+                                <TextView
+                                    android:id="@+id/tv_inter"
+                                    android:layout_width="110dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="0ms"
+                                    android:textSize="20dp" >
+                                </TextView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <Button
+                                    android:id="@+id/bt_timer_get"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="获取"
+                                    android:textSize="20dp" >
+                                </Button>
+
+                                <Button
+                                    android:id="@+id/bt_timer_set"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="设置"
+                                    android:textSize="20dp" >
+                                </Button>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/Backcolor1"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/tB_EPCAndTID"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="同时读取EPC和TID"
+                                android:textSize="20dp" >
+                            </TextView>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/countTXTStartQ"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="State"
+                                    android:textSize="20dp" >
+                                </TextView>
+
+                                <Spinner
+                                    android:id="@+id/sp_set_startq"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="20dp" >
+                                </Spinner>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <Button
+                                    android:id="@+id/bt_tid_get"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="获取"
+                                    android:textSize="25dp" >
+                                </Button>
+
+                                <Button
+                                    android:id="@+id/bt_tid_set"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="设置"
+                                    android:textSize="25dp" >
+                                </Button>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="85dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/Backcolor2"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:id="@+id/textView1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="单通道读写功率"
+                                    android:textSize="20dp" />
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal" >
+
+                                    <SeekBar
+                                        android:id="@+id/threshold_value"
+                                        android:layout_width="168dp"
+                                        android:layout_height="wrap_content"
+                                        android:max="30"
+                                        android:progress="100" />
+
+                                    <EditText
+                                        android:id="@+id/Text_threshold_value"
+                                        android:layout_width="74dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:ems="10"
+                                        android:inputType="number" />
+
+                                    <Button
+                                        android:id="@+id/getPowerBtn"
+                                        android:layout_width="80dp"
+                                        android:layout_height="50dp"
+                                        android:text="获取" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        
+                         <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/Backcolor1"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:id="@+id/tB_GoToByte"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="协议直达"
+                                    android:textSize="20dp" />
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal" >
+                                
+                                <EditText
+                                        android:id="@+id/Text_throughdata"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1" 
+                                        android:text="在此输入下发协议数据"
+                                        />
+                                
+                                    <Button
+                                        android:id="@+id/Btn_GoToByte"
+                                        android:layout_width="80dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="下发" />
+                                                                       
+                             </LinearLayout>
+                             
+                        </LinearLayout>
+                        
+
+                        <!-- Tab2 滚动条End -->
+
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+
+            <!-- ********************************tab2 End********************************************* -->
+
+
+            <!-- ********************************tab3 Start********************************************* -->
+
+            <LinearLayout
+                android:id="@+id/tab3"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:keepScreenOn="true"
+                android:orientation="vertical" >
+
+                <ScrollView
+                    android:id="@+id/scrollview3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <!-- Start -->
+
+
+                        <!-- 通信参数 -->
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/Backcolor1"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/tB_Communication"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="通信参数"
+                                android:textColor="@drawable/RoyalBlue"
+                                android:textSize="16dp"
+                                android:textStyle="bold" >
+                            </TextView>
+
+                            <!-- Mac地址 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:layout_width="83dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="MAC"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/net_mac"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+                            </LinearLayout>
+
+                            <!-- 子网掩码 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_Mask"
+                                    android:layout_width="83dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="子网掩码"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/net_mask"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+                            </LinearLayout>
+
+                            <!-- 网关 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_GateWay"
+                                    android:layout_width="83dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="网关"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/net_gateway"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+                            </LinearLayout>
+
+                            <!-- DNS -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:layout_width="83dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="DNS"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/net_dns"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+                            </LinearLayout>
+
+                            <!-- 读写器IP -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_ReaderIp"
+                                    android:layout_width="83dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="读写器IP"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/net_readerip"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+                            </LinearLayout>
+
+                            <!-- 读写器端口 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_ReaderPort"
+                                    android:layout_width="83dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="读写器端口"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/net_readerport"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+                            </LinearLayout>
+
+                            <!-- 服务器ip -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_ServerIp"
+                                    android:layout_width="83dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="服务器IP"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/net_serverip"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+                            </LinearLayout>
+
+                            <!-- 服务器端口 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_ServerPort"
+                                    android:layout_width="83dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="服务器端口"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/net_serverport"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+                            </LinearLayout>
+
+                            <!-- 通信端口选择 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_ExtraPort"
+                                    android:layout_width="83dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="通信端口"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <Spinner
+                                    android:id="@+id/sp_net_port"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/textview_size" >
+                                </Spinner>
+                            </LinearLayout>
+
+                            <!-- 通信参数获取设置 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <Button
+                                    android:id="@+id/btn_net_get"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="获取"
+                                    android:textColor="@drawable/Navy"
+                                    android:textSize="@dimen/edittext_size"
+                                    android:textStyle="bold" />
+
+                                <Button
+                                    android:id="@+id/btn_net_set"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="设置"
+                                    android:textColor="@drawable/Navy"
+                                    android:textSize="@dimen/edittext_size"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- 4G参数 -->
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/Backcolor2"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/tB_4GConfig"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="4G参数"
+                                android:textColor="@drawable/MediumSlateBlue"
+                                android:textSize="16dp"
+                                android:textStyle="bold" >
+                            </TextView>
+
+                            <!-- APN -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="APN"
+                                    android:textColor="@drawable/MediumSlateBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/net_4g_apn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:textColor="@drawable/MediumSlateBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+                            </LinearLayout>
+
+                            <!-- 用户 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_4GUsers"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="用户"
+                                    android:textColor="@drawable/MediumSlateBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/net_4g_user"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:textColor="@drawable/MediumSlateBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+                            </LinearLayout>
+
+                            <!-- 密码 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_4GPwd"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="密码"
+                                    android:textColor="@drawable/MediumSlateBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/net_4g_pwd"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:textColor="@drawable/MediumSlateBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+                            </LinearLayout>
+
+                            <!-- 4G服务器IP -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_4GServerIp"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="4G服务器IP"
+                                    android:textColor="@drawable/MediumSlateBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/net_4g_serverip"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:textColor="@drawable/MediumSlateBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+                            </LinearLayout>
+
+                            <!-- 4G服务器端口 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_4GServerPort"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="4G服务器端口"
+                                    android:textColor="@drawable/MediumSlateBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/net_4g_serverport"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:textColor="@drawable/MediumSlateBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+                            </LinearLayout>
+
+                            <!-- 4G参数获取设置 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <Button
+                                    android:id="@+id/btn_net_get4g"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="获取"
+                                    android:textColor="@drawable/Navy"
+                                    android:textSize="@dimen/edittext_size"
+                                    android:textStyle="bold" />
+
+                                <Button
+                                    android:id="@+id/btn_net_set4g"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="设置"
+                                    android:textColor="@drawable/Navy"
+                                    android:textSize="@dimen/edittext_size"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- Wifi参数 -->
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/Backcolor1"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/tB_WifiConfig"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="Wifi参数"
+                                android:textColor="@drawable/DodgerBlue"
+                                android:textSize="16dp"
+                                android:textStyle="bold" >
+                            </TextView>
+
+                            <!-- SSID -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:layout_width="110dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="SSID"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/net_wifi_ssid"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+                            </LinearLayout>
+
+                            <!-- 密码 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_WifiPwd"
+                                    android:layout_width="110dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="密码"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/net_wifi_pwd"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+                            </LinearLayout>
+
+                            <!-- 加密模式 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_EnMode"
+                                    android:layout_width="110dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="加密模式"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <Spinner
+                                    android:id="@+id/sp_wifi_mode"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/textview_size" >
+                                </Spinner>
+                            </LinearLayout>
+
+                            <!-- 加密算法alg -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_EnType"
+                                    android:layout_width="110dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="加密算法"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <Spinner
+                                    android:id="@+id/sp_wifi_alg"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/textview_size" >
+                                </Spinner>
+                            </LinearLayout>
+
+                            <!-- 网关 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_WifiGateWay"
+                                    android:layout_width="110dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="网关"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/net_wifi_gateway"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+                            </LinearLayout>
+
+                            <!-- Wifi服务器IP -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_WifiServerIp"
+                                    android:layout_width="110dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Wifi服务器IP"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/net_wifi_serverip"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+                            </LinearLayout>
+
+                            <!-- Wifi服务器端口 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_WifiServerPort"
+                                    android:layout_width="110dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Wifi服务器端口"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/net_wifi_serverport"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+                            </LinearLayout>
+
+                            <!-- 子网掩码 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_WifiMask"
+                                    android:layout_width="110dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="子网掩码"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/net_wifi_mask"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+                            </LinearLayout>
+
+                            <!-- 读写器IP -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_WifiReaderIp"
+                                    android:layout_width="110dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="读写器IP"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/net_wifi_readerip"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:textColor="@drawable/DodgerBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+                            </LinearLayout>
+
+                            <!-- Wifi参数获取设置 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <Button
+                                    android:id="@+id/btn_net_getwifi"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="获取"
+                                    android:textColor="@drawable/Navy"
+                                    android:textSize="@dimen/edittext_size"
+                                    android:textStyle="bold" />
+
+                                <Button
+                                    android:id="@+id/btn_net_setwifi"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="设置"
+                                    android:textColor="@drawable/Navy"
+                                    android:textSize="@dimen/edittext_size"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- End -->
+
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+
+            <!-- ********************************tab3 End********************************************* -->
+            
+            <!-- ********************************tab4 Start********************************************* -->
+
+            <LinearLayout
+                android:id="@+id/tab4"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:keepScreenOn="true"
+                android:orientation="vertical" >
+
+                <ScrollView
+                    android:id="@+id/scrollview4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <!-- Start -->
+
+
+                        <!-- 多通道读写功率 -->
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/Backcolor1"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/tB_ChannelsPowerConfig"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="多通道功率"
+                                android:textColor="@drawable/RoyalBlue"
+                                android:textSize="16dp"
+                                android:textStyle="bold" >
+                            </TextView>
+
+                            <!-- 功率选择几通道 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_PowerChannels4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:text="4通道" />
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_PowerChannels8"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="8通道" />
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_PowerChannels16"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="16通道" />
+                            </LinearLayout>
+
+                            <!-- Ant1/2/3/4读写功率 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <!-- Ant1读写功率 -->
+
+                                <TextView
+                                    android:layout_width="43dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ant1"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/power_Ant1"
+                                    android:layout_width="47dp"
+                                    android:layout_height="wrap_content"
+                                    android:maxLength="2"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <!-- Ant2读写功率 -->
+
+                                <TextView
+                                    android:layout_width="43dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ant2"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/power_Ant2"
+                                    android:layout_width="47dp"
+                                    android:layout_height="wrap_content"
+                                    android:maxLength="2"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <!-- Ant3读写功率 -->
+
+                                <TextView
+                                    android:layout_width="43dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ant3"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/power_Ant3"
+                                    android:layout_width="47dp"
+                                    android:layout_height="wrap_content"
+                                    android:maxLength="2"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <!-- Ant4读写功率 -->
+
+                                <TextView
+                                    android:layout_width="43dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ant4"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/power_Ant4"
+                                    android:layout_width="47dp"
+                                    android:layout_height="wrap_content"
+                                    android:maxLength="2"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+                            </LinearLayout>
+
+                            <!-- Ant5/6/7/8读写功率 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <!-- Ant5读写功率 -->
+
+                                <TextView
+                                    android:layout_width="43dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ant5"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/power_Ant5"
+                                    android:layout_width="47dp"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:maxLength="2"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <!-- Ant6读写功率 -->
+
+                                <TextView
+                                    android:layout_width="43dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ant6"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/power_Ant6"
+                                    android:layout_width="47dp"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:maxLength="2"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <!-- Ant7读写功率 -->
+
+                                <TextView
+                                    android:layout_width="43dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ant7"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/power_Ant7"
+                                    android:layout_width="47dp"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:maxLength="2"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <!-- Ant8读写功率 -->
+
+                                <TextView
+                                    android:layout_width="43dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ant8"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/power_Ant8"
+                                    android:layout_width="47dp"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:maxLength="2"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+                            </LinearLayout>
+
+                            <!-- Ant9/10/11/12读写功率 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <!-- Ant9读写功率 -->
+
+                                <TextView
+                                    android:layout_width="43dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ant9"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/power_Ant9"
+                                    android:layout_width="47dp"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:maxLength="2"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <!-- Ant10读写功率 -->
+
+                                <TextView
+                                    android:layout_width="43dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ant10"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/power_Ant10"
+                                    android:layout_width="47dp"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:maxLength="2"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <!-- Ant11读写功率 -->
+
+                                <TextView
+                                    android:layout_width="43dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ant11"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/power_Ant11"
+                                    android:layout_width="47dp"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:maxLength="2"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <!-- Ant12读写功率 -->
+
+                                <TextView
+                                    android:layout_width="43dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ant12"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/power_Ant12"
+                                    android:layout_width="47dp"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:maxLength="2"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+                            </LinearLayout>
+
+                            <!-- Ant13/14/15/16读写功率 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <!-- Ant13读写功率 -->
+
+                                <TextView
+                                    android:layout_width="43dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ant13"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/power_Ant13"
+                                    android:layout_width="47dp"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:maxLength="2"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <!-- Ant14读写功率 -->
+
+                                <TextView
+                                    android:layout_width="43dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ant14"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/power_Ant14"
+                                    android:layout_width="47dp"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:maxLength="2"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <!-- Ant15读写功率 -->
+
+                                <TextView
+                                    android:layout_width="43dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ant15"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/power_Ant15"
+                                    android:layout_width="47dp"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:maxLength="2"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <!-- Ant16读写功率 -->
+
+                                <TextView
+                                    android:layout_width="43dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ant16"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/power_Ant16"
+                                    android:layout_width="47dp"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:maxLength="2"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+                            </LinearLayout>
+
+                            <!-- 多通道读写功率 获取/设置 按钮 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <Button
+                                    android:id="@+id/btn_ChannelsPower_Get"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="获取"
+                                    android:textColor="@drawable/Navy"
+                                    android:textSize="@dimen/edittext_size"
+                                    android:textStyle="bold" />
+
+                                <Button
+                                    android:id="@+id/btn_ChannelsPower_Set"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="设置"
+                                    android:textColor="@drawable/Navy"
+                                    android:textSize="@dimen/edittext_size"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- 多通道天线工作时间及工作状态 -->
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/Backcolor2"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/tB_ChannelsTimeAndWorkStateConfig"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="多通道天线工作时间及工作状态"
+                                android:textColor="@drawable/MediumSlateBlue"
+                                android:textSize="16dp"
+                                android:textStyle="bold" >
+                            </TextView>
+
+                            <!-- 天线工作时间和工作状态选择几通道 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_WorkAndTimeChannels4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:text="4通道" />
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_WorkAndTimeChannels8"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="8通道" />
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_WorkAndTimeChannels16"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="16通道" />
+                            </LinearLayout>
+
+                            <!-- Ant1、Ant2工作时间及工作状态 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_WorkState_Ant1"
+                                    android:layout_width="75dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ant1" />
+
+                                <EditText
+                                    android:id="@+id/WorkTime_Ant1"
+                                    android:maxLength="5"
+                                    android:layout_width="82dp"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ms"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_WorkState_Ant2"
+                                    android:layout_width="75dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ant2" />
+
+                                <EditText
+                                    android:id="@+id/WorkTime_Ant2"
+                                    android:maxLength="5"
+                                    android:layout_width="82dp"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ms"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+                            </LinearLayout>
+
+                            <!-- Ant3、Ant4工作时间及工作状态 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_WorkState_Ant3"
+                                    android:layout_width="75dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ant3" />
+
+                                <EditText
+                                    android:id="@+id/WorkTime_Ant3"
+                                    android:maxLength="5"
+                                    android:layout_width="82dp"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ms"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_WorkState_Ant4"
+                                    android:layout_width="75dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ant4" />
+
+                                <EditText
+                                    android:id="@+id/WorkTime_Ant4"
+                                    android:maxLength="5"
+                                    android:layout_width="82dp"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ms"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+                            </LinearLayout>
+
+                            <!-- Ant5、Ant6工作时间及工作状态 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_WorkState_Ant5"
+                                    android:enabled="false"
+                                    android:layout_width="75dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ant5" />
+
+                                <EditText
+                                    android:id="@+id/WorkTime_Ant5"
+                                    android:maxLength="5"
+                                    android:enabled="false"
+                                    android:layout_width="82dp"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ms"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_WorkState_Ant6"
+                                    android:enabled="false"
+                                    android:layout_width="75dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ant6" />
+
+                                <EditText
+                                    android:id="@+id/WorkTime_Ant6"
+                                    android:maxLength="5"
+                                    android:enabled="false"
+                                    android:layout_width="82dp"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ms"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+                            </LinearLayout>
+
+                            <!-- Ant7、Ant8工作时间及工作状态 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_WorkState_Ant7"
+                                    android:enabled="false"
+                                    android:layout_width="75dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ant7" />
+
+                                <EditText
+                                    android:id="@+id/WorkTime_Ant7"
+                                    android:maxLength="5"
+                                    android:enabled="false"
+                                    android:layout_width="82dp"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ms"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_WorkState_Ant8"
+                                    android:enabled="false"
+                                    android:layout_width="75dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ant8" />
+
+                                <EditText
+                                    android:id="@+id/WorkTime_Ant8"
+                                    android:maxLength="5"
+                                    android:enabled="false"
+                                    android:layout_width="82dp"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ms"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+                            </LinearLayout>
+
+                            <!-- Ant9、Ant10工作时间及工作状态 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_WorkState_Ant9"
+                                    android:enabled="false"
+                                    android:layout_width="75dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ant9" />
+
+                                <EditText
+                                    android:id="@+id/WorkTime_Ant9"
+                                    android:maxLength="5"
+                                    android:enabled="false"
+                                    android:layout_width="82dp"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ms"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_WorkState_Ant10"
+                                    android:enabled="false"
+                                    android:layout_width="75dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ant10" />
+
+                                <EditText
+                                    android:id="@+id/WorkTime_Ant10"
+                                    android:maxLength="5"
+                                    android:enabled="false"
+                                    android:layout_width="82dp"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ms"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+                            </LinearLayout>
+
+                            <!-- Ant11、Ant12工作时间及工作状态 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_WorkState_Ant11"
+                                    android:enabled="false"
+                                    android:layout_width="75dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ant11" />
+
+                                <EditText
+                                    android:id="@+id/WorkTime_Ant11"
+                                    android:maxLength="5"
+                                    android:enabled="false"
+                                    android:layout_width="82dp"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ms"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_WorkState_Ant12"
+                                    android:enabled="false"
+                                    android:layout_width="75dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ant12" />
+
+                                <EditText
+                                    android:id="@+id/WorkTime_Ant12"
+                                    android:maxLength="5"
+                                    android:enabled="false"
+                                    android:layout_width="82dp"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ms"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+                            </LinearLayout>
+
+                            <!-- Ant13、Ant14工作时间及工作状态 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_WorkState_Ant13"
+                                    android:enabled="false"
+                                    android:layout_width="75dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ant13" />
+
+                                <EditText
+                                    android:id="@+id/WorkTime_Ant13"
+                                    android:maxLength="5"
+                                    android:enabled="false"
+                                    android:layout_width="82dp"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ms"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_WorkState_Ant14"
+                                    android:enabled="false"
+                                    android:layout_width="75dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ant14" />
+
+                                <EditText
+                                    android:id="@+id/WorkTime_Ant14"
+                                    android:maxLength="5"
+                                    android:enabled="false"
+                                    android:layout_width="82dp"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ms"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+                            </LinearLayout>
+
+                            <!-- Ant15、Ant16工作时间及工作状态 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_WorkState_Ant15"
+                                    android:enabled="false"
+                                    android:layout_width="75dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ant15" />
+
+                                <EditText
+                                    android:id="@+id/WorkTime_Ant15"
+                                    android:maxLength="5"
+                                    android:enabled="false"
+                                    android:layout_width="82dp"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ms"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_WorkState_Ant16"
+                                    android:enabled="false"
+                                    android:layout_width="75dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ant16" />
+
+                                <EditText
+                                    android:id="@+id/WorkTime_Ant16"
+                                    android:maxLength="5"
+                                    android:enabled="false"
+                                    android:layout_width="82dp"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ms"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+                            </LinearLayout>
+                            
+                             <!-- 等待时间 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tB_WaitTime"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="等待时间"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/eT_WaitTime"
+                                    android:maxLength="5"
+                                    android:layout_width="82dp"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="@dimen/edittext_len"
+                                    android:numeric="integer"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/edittext_size" >
+                                </EditText>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ms"
+                                    android:textColor="@drawable/RoyalBlue"
+                                    android:textSize="@dimen/textview_size" >
+                                </TextView>
+                              
+                            </LinearLayout>
+                            
+                            <!-- 多通道天线工作时间、工作状态设置 -->
+                            
+                             <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <Button
+                                    android:id="@+id/btn_ChannelsTime_Get"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="获取"
+                                    android:textColor="@drawable/Navy"
+                                    android:textSize="@dimen/edittext_size"
+                                    android:textStyle="bold" />
+
+                                <Button
+                                    android:id="@+id/btn_ChannelsTime_Set"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="设置"
+                                    android:textColor="@drawable/Navy"
+                                    android:textSize="@dimen/edittext_size"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                                                     
+                        </LinearLayout>
+
+                        <!-- End -->
+
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</TabHost>

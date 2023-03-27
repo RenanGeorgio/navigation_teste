@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="customLayoutColor">#F5F5F5</color>
+    <color name="list_item_focus">#626fcd</color>
+
+    <drawable name="Backcolor1">#DCDCDC</drawable>
+    <drawable name="Backcolor2">#D3D3D3</drawable>
+
+    <drawable name="RoyalBlue">#4169E1</drawable>
+    <drawable name="Navy">#000080</drawable>
+    <drawable name="MediumSlateBlue">#7B68EE</drawable>
+    <drawable name="DodgerBlue">#1E90FF</drawable>
+    <drawable name="DarkGreen">#006400</drawable>
+</resources>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent" 
+	android:keepScreenOn="true"
+	android:focusable="true"
+	android:focusableInTouchMode="true"
+	android:background="#225679"
+	>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="0.71"
+    android:orientation="horizontal" 
+    android:gravity="center_vertical"
+    >
+
+    	<TextView
+    	    android:id="@+id/tB_Pwd"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="senha：         "
+        	android:textSize="20dp" 
+        	>
+    	</TextView>
+    	
+    	<EditText 
+    	    android:id="@+id/et_acc_pwd"
+    	    android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:minWidth="200dp"
+        	android:hint="Digite a senha de 8 dígitos"
+        	android:numeric="integer"
+        	android:singleLine="true"
+        	android:text="00000000"
+        	android:maxLength="8"
+    	    />
+    	
+</LinearLayout>
+
+<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:background="#236636"
+        android:layout_weight="1"
+        >
+    	
+    	<LinearLayout 
+    	    android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:orientation="vertical" 
+    	    >
+    	    
+    	    <TextView
+    	    android:id="@+id/countTXT"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="filtro"
+        	android:textSize="30sp"
+        	 >
+    		</TextView>
+    		
+    	     <Spinner
+    	         android:id="@+id/sp_acc_filter"
+    	         android:layout_width="140dp"
+    	         android:layout_height="match_parent"
+    	         android:textSize="20dp" >
+
+    		</Spinner>
+    	</LinearLayout>
+    	
+    	<LinearLayout 
+    	    android:layout_width="match_parent"
+        	android:layout_height="match_parent"
+        	android:orientation="vertical" 
+    	    >
+    	     
+    	    <TextView
+    	    android:id="@+id/tv_acc_fileter_count"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="comprimento=0"
+        	android:textSize="30sp"
+        	android:layout_weight="1"
+        	 >
+    		</TextView>
+
+    	<EditText
+    	    android:id="@+id/et_acc_filter"
+    	    android:layout_width="match_parent"
+    	    android:layout_height="match_parent"
+    	    android:layout_weight="5"
+    	    android:enabled="true"
+    	   
+    	    android:hint="Insira os dados filtrados, separados por intervalos, Min Unit: Word"
+    	    android:minWidth="200dp" />
+
+    	</LinearLayout>
+    	
+</LinearLayout>
+
+
+<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:layout_weight="2"
+        android:background="#324436"
+        android:gravity="center_vertical"
+        >
+    	
+<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:layout_weight="2"
+        android:gravity="center_vertical"
+        >
+    	
+    	<LinearLayout 
+    	    android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:orientation="vertical" 
+    	    >
+    	    
+    	    <TextView
+    	    android:id="@+id/bank_countTXT"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="área de etiqueta"
+        	android:textSize="20dp" >
+    		</TextView>
+    		
+    	     <Spinner
+    	    android:id="@+id/sp_acc_bank"
+        	android:layout_width="100dp"
+        	android:layout_height="wrap_content"
+        	android:textSize="20dp" >
+    		</Spinner> 
+    	</LinearLayout>
+    	
+    	
+    	<LinearLayout 
+    	    android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:orientation="vertical" 
+    	    >
+    	    
+    	    <TextView
+    	    android:id="@+id/addrstart_countTXT"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="endereço inicial"
+        	android:textSize="20dp" >
+    		</TextView>
+    		
+    	     <Spinner
+    	    android:id="@+id/sp_acc_offset"
+        	android:layout_width="100dp"
+        	android:layout_height="wrap_content"
+        	android:textSize="20dp" >
+    		</Spinner>  
+    	</LinearLayout>
+</LinearLayout>    	
+    	
+
+<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:layout_weight="2"
+        android:gravity="center_vertical"
+        >
+    	
+    	<LinearLayout 
+    	    android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:orientation="vertical" 
+    	    >
+    	    
+    	    <TextView
+    	    android:id="@+id/Length_countTXT"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="comprimento"
+        	android:textSize="20dp" >
+    		</TextView>
+    		
+    	     <Spinner
+    	    android:id="@+id/sp_acc_length"
+        	android:layout_width="100dp"
+        	android:layout_height="wrap_content"
+        	android:textSize="20dp" >
+    		</Spinner>
+    	</LinearLayout>
+    	
+    	<LinearLayout 
+    	    android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:orientation="vertical" 
+    	    >
+    	    
+    	    <TextView
+    	    android:id="@+id/operate_countTXT"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="operate"
+        	android:textSize="20dp" >
+    		</TextView>
+    		
+    	     <Spinner
+    	    android:id="@+id/sp_acc_oper"
+        	android:layout_width="100dp"
+        	android:layout_height="wrap_content"
+        	android:textSize="20dp" 
+        	android:visibility="gone"
+        	>
+    		</Spinner>
+    	</LinearLayout>
+    	
+    </LinearLayout>
+    	
+</LinearLayout>
+
+<LinearLayout 
+    	    android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="vertical" 
+        	android:layout_weight="2"
+    	    >
+    	  <TextView
+    	    android:id="@+id/tv_acc_data_count"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="comprimento=0"
+        	android:textSize="30sp"
+        	android:layout_weight="1"
+        	 >
+    		</TextView>
+    	     <EditText
+    	         android:id="@+id/et_acc_write_read"
+    	         android:layout_width="match_parent"
+    	         android:layout_height="match_parent"
+    	         android:layout_weight="5"
+    	         android:minWidth="300dp"
+    	         android:textSize="20dp" 
+    	         
+    	         android:hint="输入过滤的数据，使用间隔隔开,Min Unit：Word"
+    	         >
+
+    		</EditText>
+    	</LinearLayout>
+
+
+<LinearLayout 
+    	    android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal" 
+        	android:layout_weight="1"
+        	android:background="#152436"
+        	android:gravity="center"
+    	    >
+    	    
+    	    <Button
+    	    android:id="@+id/bt_acc_read"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="Ler"
+        	android:textSize="20dp"
+        	android:layout_marginLeft="20dp"
+        	 >
+    		</Button>
+    		
+    	     <Button
+    	    android:id="@+id/bt_acc_write"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:textSize="20dp" 
+        	android:text="Escrever"
+        	android:layout_marginLeft="30dp"
+        	>
+    		</Button>
+    	</LinearLayout>
+
+
+</LinearLayout>
+
+
+

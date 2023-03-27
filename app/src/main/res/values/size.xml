@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <dimen name="textview_size">16dp</dimen>
+     <dimen name="edittext_size">20dp</dimen>
+     <dimen name="edittext_len">200dp</dimen>
+     
+</resources>
